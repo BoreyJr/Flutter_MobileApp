@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myfont/MainPage.dart';
-import 'package:myfont/MyListView.dart';
+import 'package:flutter/services.dart';
+import 'package:myfont/page/MyLocalData.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -9,7 +10,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyListView(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.light,
+        fontFamily: "Khmer OS fasthand",
+      ),
+      home: ReaderPage(),
+      // initialRoute: ('/'),
+      // routes: {
+      //   ('/'): (ctx) => Home(),
+      //   SubjectDetail.routeName: (ctx) => SubjectDetail(),
+      // },
     );
   }
 }
